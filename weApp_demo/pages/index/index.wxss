@@ -1,0 +1,38 @@
+page,.section {
+  height: 100%;
+  background-color: pink;
+}
+/* .flex-wrap {
+  display: flex;
+  /* row 和 column 对齐方式 */
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  /* 次轴对齐 */
+  /* align-items: center; */
+/* } */ 
+
+.flex-wrap {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-clo {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flex-item {
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+}
+.bc_green {
+  background-color: #09ba07;
+}
+.bc_red {
+  background-color: #f76160;
+}
+.bc_blue {
+  background-color: #0faeff;
+}

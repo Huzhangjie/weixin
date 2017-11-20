@@ -1,0 +1,26 @@
+<view class="section">
+<view>
+  <text>{{motto}}</text> 
+</view>
+  <!-- <view class="section__title">
+    <!-- <text>flex-direction:row</text> -->
+  <!-- </view>
+  <view class="flex-wrap flex-row">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view> --> 
+  <text>row</text>
+  <view class="flex-wrap flex-row">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+  <text>column</text>
+  <view class="flex-wrap flex-clo">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+
+</view>

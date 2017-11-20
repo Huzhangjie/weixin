@@ -1,0 +1,15 @@
+/**
+css wxss 微信小程序的样式
+ app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  /* 弹性布局 有主轴和纵轴之分 row */
+  flex-direction: column;
+  align-items: center;
+  /* 主轴对齐 */
+  justify-content: flex-start;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

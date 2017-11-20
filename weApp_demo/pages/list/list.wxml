@@ -1,0 +1,29 @@
+<!--pages/list/list.wxml-->
+<!-- <view> -->
+    <!-- 数据绑定 MVVM -->
+    <!-- 数据MOdel data View 形成界面 -->
+    <!-- DOM 过时 
+    VM 试图模型 -->
+
+    <!-- <text>{{name[0]}}+{{age}}</text>
+    <text>{{name[1]}}+{{age}}</text> -->
+
+    <!-- 占位符 指令 -->
+    <!-- <block wx:for="{{names}}" wx:key="" wx:for-item="name" wx:for-index="index">
+        <view class="item">
+        {{index+1}} .{{name}} 
+        </view>
+    </block>
+</view> -->
+<view class="container">
+    <block wx:for="{{arrList}}" wx:key="index">
+        <view class="item">
+            <text>{{item}}</text>
+        </view>
+    </block>
+    <block wx:if="{{arrList.length==0}}">
+        <view class="item">
+            <text>下拉加载更多</text>
+        </view>
+    </block>
+</view>
