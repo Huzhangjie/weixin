@@ -1,0 +1,25 @@
+page {
+    background-color: #fbfbfb;
+    height: 100%;
+
+}
+.root-wrap {
+    height: 100%;
+}
+
+.wrapper {
+    padding-bottom: 96rpx;
+}
+.wrapper .info {
+    padding: 0 36rpx;
+}
+.wrapper .info-title {
+    padding: 40rpx 0;
+    line-height: 60rpx;
+    font-size: 44rpx;
+    font-weight: 500;
+    color: #333;
+} 
+.wrapper .info-desc {
+    
+}
