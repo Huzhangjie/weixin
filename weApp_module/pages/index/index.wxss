@@ -1,0 +1,20 @@
+
+swiper {
+  background-color: green;
+  text-align: center;
+}
+
+.swiper-tab {
+  display: flex;
+  align-items: center;
+  background-color: pink;
+  height: 88rpx;
+}
+.swiper-tab .swiper-tab-item {
+  flex: 1;
+  text-align: center;
+}
+.active {
+  color: #F65959;
+  border-bottom: 4px solid #F65959;
+}
