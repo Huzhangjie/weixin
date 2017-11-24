@@ -1,0 +1,21 @@
+
+@import 'styles/reset.wxss';
+@import 'styles/hero.wxss';
+@import 'styles/button.wxss';
+@import 'styles/card.wxss';
+@import 'styles/cover.wxss';
+@import 'styles/spec.wxss';
+@import 'styles/action.wxss';
+@import 'styles/story.wxss';
+
+page {
+    background-color: #f8f8f8;
+}
+
+.section {
+    /* rem,rpx,%等相对单位 
+    vh vw 相对于 viewport视窗 的相对宽高 */
+    /* 占满一屏 */
+    height: 100vh;
+    background: #333;
+}
