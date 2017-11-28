@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/bkstore/bkstore",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/dingyue/dingyue"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "网易云阅读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "corlor": "#999999",
+    "selectedColor": "#f85853",
+    "vackgroundColor": "#ffffff",
+    "borderStyle": "#e0e0e0",
+    "list": [
+      {
+        "pagePath": "pages/bkstore/bkstore",
+        "iconPath": "images/bookstore.png",
+        "selectedIconPath": "images/bookstore_sel.png",
+        "text": "书城"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bookshelf.png",
+        "selectedIconPath": "images/bookshelf_sel.png",
+        "text" : "书架"
+      },
+      {
+        "pagePath": "pages/dingyue/dingyue",
+        "iconPath": "images/subscription.png",
+        "selectedIconPath": "images/subscription_sel.png",
+        "text": "订阅"
+      }
+    ]
+  }
+}

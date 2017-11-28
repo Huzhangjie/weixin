@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="page__hd">
+      <view class="bookshelf">书架</view>
+    </view>
+  <view class="page__bd page_mybooks">
+    <view class="bd_row_books">
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+    </view>
+    <view class="bd_row_books">
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+    </view>
+    <view class="bd_row_books">
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+      <view class="bd_book-item">
+        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+        <view class="hd_book-title">斗破苍穹</view>
+        <view class="hd_book-author">天蚕土豆</view>
+      </view>
+    </view>
+    <view class="bd_book-item">
+      <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+      <view class="hd_book-title">斗破苍穹</view>
+      <view class="hd_book-author">天蚕土豆</view>
+    </view>
+    <view class="book-item"></view>
+    <view class="book-item"></view>
+  </view>
+</view>
