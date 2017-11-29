@@ -1,31 +1,76 @@
+
 <view class="container">
     <view class="page__hd">
-        <view class="page__hd_tab hd_swiper-tab">
-            <view class="hd_swiper-tab-item {{hdActiveIndex==0?'active':''}}" bindtap="hdchangeTab" data-index='0'>男生</view>
-            <view class="hd_swiper-tab-item {{hdActiveIndex==1?'active':''}}" bindtap="hdchangeTab" data-index='1'>女生</view>
+        <view class="page__hd-fixed">
+            <view class="page__hd_tab hd_swiper-tab">
+                <view class="hd_swiper-tab-item {{hdActiveIndex==0?'active':''}}" bindtap="hdchangeTab" data-index='0'>男生</view>
+                <view class="hd_swiper-tab-item {{hdActiveIndex==1?'active':''}}" bindtap="hdchangeTab" data-index='1'>女生</view>
+                <view class="hd_swiper-tab-item {{hdActiveIndex==2?'active':''}}" bindtap="hdchangeTab" data-index='2'>出版</view>
+            </view>
         </view>
-        <swiper current='{{hdActiveIndex}}'>
-            <!-- 大的页面(男生 女生 版权)的切换 -->
-            <swiper-item>
+    </view>
+    <view class="page__bd">
+        <swiper class="hd_swiper" current='{{hdActiveIndex}}'>
+            <!-- 大的页面(男生 女生 出版)的切换 -->
+            <swiper-item class="hd_swiper-item">
                 <view class="page__bd_tab bd_swiper-tab">
-                    <view class="bd_swiper-tab-item {{bdActiveIndex==0?'active':''}}" bindtap="bdchangeTab" data-index='0'>推荐</view>
-                    <view class="bd_swiper-tab-item {{bdActiveIndex==1?'active':''}}" bindtap="bdchangeTab" data-index='1'>口味</view>
-                    <view class="bd_swiper-tab-item {{bdActiveIndex==2?'active':''}}" bindtap="bdchangeTab" data-index='2'>免费</view>
+                    <!-- <view class="page__bd-fixed"> -->
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==0?'active':''}}" bindtap="bdchangeTab" data-index='0'>推荐</view>
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==1?'active':''}}" bindtap="bdchangeTab" data-index='1'>口味</view>
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==2?'active':''}}" bindtap="bdchangeTab" data-index='2'>免费</view>
+                    <!-- </view> -->
                 </view>
-                <swiper current='{{bdActiveIndex}}' bindchange='bdSwiperTab'>
-                    <swiper-item>
-                        推荐
+                <swiper class="bd_swiper" current='{{bdActiveIndex}}' bindchange='bdSwiperTab'>
+                    <swiper-item class="bd_swiper-item">
+                        <view class="bd_row_books">
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                        </view>
+                        <view class="bd_row_books">
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                            <view class="bd_book-item">
+                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
+                              <view class="hd_book-title">斗破苍穹</view>
+                              <view class="hd_book-author">天蚕土豆</view>
+                            </view>
+                        </view>
+                        
                     </swiper-item>
-                    <swiper-item>
+                    <swiper-item class="bd_swiper-item">
                         口味
                     </swiper-item>
-                    <swiper-item>
+                    <swiper-item class="bd_swiper-item">
                         免费
                     </swiper-item>
                  </swiper>
             </swiper-item>
             <swiper-item>
                 女生
+            </swiper-item>
+            <swiper-item>
+                出版
             </swiper-item>
         </swiper>
     </view>

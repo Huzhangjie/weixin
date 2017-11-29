@@ -1,18 +1,36 @@
 
 .page__hd {
     width: 100%;
-    height: 80rpx;
-    background-color: #ffffff;
+    height: 8vh;
+    background-color: greenyellow
+    
+}
+.page__hd-fixed {
+    height: 8vh;
+    width: 100%;
+    background-color: white;
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 10;
+    /* align-content: center; */
 }
+/* .page__bd-fixed {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+} */
 .page__hd_tab {
     width: 50%;
     margin: auto;
     background-color: #f2f2f2;
     display: flex;
     border-radius: 38rpx;
+   
 }
 .hd_swiper-tab-item {
     margin: 5rpx;
@@ -26,18 +44,65 @@
     color: #000000;
 }
 
+.page__bd {
+    background-color: pink;
+    /* height: 100vh; */
+}
 .page__bd_tab {
     width: 100%;
+    height: 5vh;
     display: flex;
+    /* justify-content: center; */
 }
 .bd_swiper-tab-item {
     flex: 1;
+    height: 50rpx;
     color: #888888;
+    align-content: center;
     text-align: center;
     font-size: 35rpx;
 }
 .bd_swiper-tab-item.active {
     color: #eb6661;
-    border-bottom: 5px solid #eb6661;
+}
+.bd_swiper-tab-item.active:after {
+    content: '';
+    display: inline-block;
+    width: 10%;
+    border-bottom: 2px solid #eb6661;
+    -webkit-transform: translate(-45rpx,17.5rpx);
+            transform: translate(-45rpx,17.5rpx);
+}
+swiper{
+    height: 92vh;
+}
+.bd_swiper{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+  }
+.bd_swiper-item {
+    overflow-y: scroll;
+}
+.bd_row_books {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 0 30rpx;
+}
+.bd_book-item {
+    flex: 1;
+    margin-left: 30rpx;
+}
+.bd_book-item:nth-child(1) {
+    margin-left: 0;
+}
+.bd_book-cover {
+    width: 18vh;
+}
+image {
+    height: 200rpx;
 }
 
