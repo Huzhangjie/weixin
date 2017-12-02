@@ -1,3 +1,4 @@
+<import src="../template/template.wxml" />
 
 <view class="container">
     <view class="page__hd">
@@ -13,50 +14,40 @@
         <swiper class="hd_swiper" current='{{hdActiveIndex}}'>
             <!-- 大的页面(男生 女生 出版)的切换 -->
             <swiper-item class="hd_swiper-item">
+              <view class="">
                 <view class="page__bd_tab bd_swiper-tab">
                     <!-- <view class="page__bd-fixed"> -->
                         <view class="bd_swiper-tab-item {{bdActiveIndex==0?'active':''}}" bindtap="bdchangeTab" data-index='0'>推荐</view>
                         <view class="bd_swiper-tab-item {{bdActiveIndex==1?'active':''}}" bindtap="bdchangeTab" data-index='1'>口味</view>
                         <view class="bd_swiper-tab-item {{bdActiveIndex==2?'active':''}}" bindtap="bdchangeTab" data-index='2'>免费</view>
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==3?'active':''}}" bindtap="bdchangeTab" data-index='3'>排行</view>
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==4?'active':''}}" bindtap="bdchangeTab" data-index='4'>分类</view>
+                        <view class="bd_swiper-tab-item {{bdActiveIndex==5?'active':''}}" bindtap="bdchangeTab" data-index='5'>专题</view>
                     <!-- </view> -->
                 </view>
+              </view>
                 <swiper class="bd_swiper" current='{{bdActiveIndex}}' bindchange='bdSwiperTab'>
                     <swiper-item class="bd_swiper-item">
-                        <view class="bd_row_books">
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
+                        <block wx:for="{{types}}" wx:key="index">
+                            <view class="books_recommend">
+                                <!-- block引进推荐部分hd 的模板 -->
+                                <template is="recommend_hd"></template>
+                                <view class="bd_row_books">
+                                    <!-- 再在hd下面添加书籍显示 内部循环引进book 显示的模板 -->
+                                    <block wx:for="{{books}}" wx:key="index">
+                                        <template is="book_list" data="{{...item}}"></template>
+                                    </block>
+                                </view>
+                                <view class="books_recommend_ft">
+                                    <span>换一换</span>
+                                    <image class="refresh" src="../../images/refresh.png" mode="aspectFit"></image>
+                                </view>
                             </view>
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
-                            </view>
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
-                            </view>
-                        </view>
-                        <view class="bd_row_books">
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
-                            </view>
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
-                            </view>
-                            <view class="bd_book-item">
-                              <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-                              <view class="hd_book-title">斗破苍穹</view>
-                              <view class="hd_book-author">天蚕土豆</view>
-                            </view>
-                        </view>
-                        
+                        </block>
+                      
+                      <!-- <block wx:for={{type}} wx:key="index"}>
+                        <template is="books_recommend_list"></template>
+                      </block> -->
                     </swiper-item>
                     <swiper-item class="bd_swiper-item">
                         口味
