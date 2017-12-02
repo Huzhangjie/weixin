@@ -1,17 +1,12 @@
 // pages/bkstore/bkstore.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     hdActiveIndex: 0,
-    bdActiveIndex: 0
+    bdActiveIndex: 0,
+    types :['本周强推','新书抢先'],
+    books: [{}],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
 
   // 头部导航的点击变化
   hdchangeTab: function(e) {
@@ -38,7 +33,29 @@ Page({
   },
 
   onLoad: function (options) {
-  
+    this.setData({
+      books: [{
+        title: '武动乾坤',
+        author: '土豆'
+      },
+      {
+        title: '酒神',
+        author: '三少'
+      },{
+        title: '斗破苍穹',
+        author: '土豆'
+      },{
+        title: '大主宰',
+        author: '土豆'
+      },{
+        title: '大主宰',
+        author: '土豆'
+      },{
+        title: '大主宰',
+        author: '土豆'
+      }]
+    })
+    console.log(this.data.books)
   },
 
   /**
