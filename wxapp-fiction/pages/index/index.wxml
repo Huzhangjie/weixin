@@ -1,68 +1,18 @@
 <!--index.wxml-->
+<import src="../template/template.wxml" />
 <view class="container">
-    <view class="page__hd">
-      <view class="bookshelf">
-        <view class="text">书架</view>
-      </view>
+  <view class="page__hd">
+    <view class="bookshelf">
+      <view class="text">书架</view>
     </view>
+  </view>
   <view class="page__bd page_mybooks">
     <view class="bd_row_books">
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗破苍穹</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">武动乾坤</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗罗大陆</view>
-        <view class="bd_book-author">唐家三少</view>
-      </view>
+      <block wx:for="{{books}}" wx:key="index">
+        <!-- {{books[index]}}  -->
+        <!-- block 引进书架书籍 -->
+        <template is="book_list" data="{{...item}}"></template> 
+      </block>
     </view>
-    <view class="bd_row_books">
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗破苍穹</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">武动乾坤</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗罗大陆</view>
-        <view class="bd_book-author">唐家三少</view>
-      </view>
-    </view>
-    <view class="bd_row_books">
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗破苍穹</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">武动乾坤</view>
-        <view class="bd_book-author">天蚕土豆</view>
-      </view>
-      <view class="bd_book-item">
-        <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-        <view class="bd_book-title">斗罗大陆</view>
-        <view class="bd_book-author">唐家三少</view>
-      </view>
-    </view>
-    <view class="bd_book-item">
-      <image class="bd_book-cover" src="../../images/dpcq.jpg" mode="aspectFit"/>
-      <view class="hd_book-title">斗破苍穹</view>
-      <view class="hd_book-author">天蚕土豆</view>
-    </view>
-    <view class="book-item"></view>
-    <view class="book-item"></view>
   </view>
 </view>
