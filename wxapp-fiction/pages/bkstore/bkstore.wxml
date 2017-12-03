@@ -28,10 +28,10 @@
               </view>
                 <swiper class="bd_swiper" current='{{bdActiveIndex}}' bindchange='bdSwiperTab'>
                     <swiper-item class="bd_swiper-item">
-                        <block wx:for="{{types}}" wx:key="index">
+                        <block wx:for="{{recommend_types}}" wx:key="index">
                             <view class="books_recommend">
                                 <!-- block引进推荐部分hd 的模板 -->
-                                <template is="recommend_hd"></template>
+                                <template is="recommend_hd" data="{{...item}}"></template>
                                 <view class="bd_row_books">
                                     <!-- 再在hd下面添加书籍显示 内部循环引进book 显示的模板 -->
                                     <block wx:for="{{books}}" wx:key="index">
