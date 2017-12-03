@@ -11,22 +11,16 @@ Page({
    
   },
   onLoad: function () {
-    this.setData({
-      books: [{
-        title: '武动乾坤',
-        author: '土豆'
-      },
-      {
-        title: '酒神',
-        author: '三少'
-      },{
-        title: '斗破苍穹',
-        author: '土豆'
-      },{
-        title: '大主宰',
-        author: '土豆'
-      },]
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5a236136e27b936ea88bda94/wxapp-fiction/bookshelf',
+      method: 'GET',
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          books: res.data.data.books
+        })
+        console.log(this.data.books)
+      }
     })
-    console.log(this.data.books)
   }
 })
