@@ -1,0 +1,20 @@
+
+<template name="book_list">
+    <view class="book-item">
+        <navigator url="">
+            <image class="book-item_cover" src="{{src}}" mode="aspectFit" />
+            <view class="book-item_title">{{title}}</view>
+            <view class="book-item_author">{{author}}</view>
+        </navigator>
+    </view>
+</template>
+
+<template name="recommend_hd">
+<!-- 推荐部分的hd的部分 -->
+  <navigator url="">
+    <view class="recommend_hd">
+      <text class="recommend_type">{{recommend}}</text>
+      <text class="recommend_more">更多</text>
+    </view> 
+  </navigator>
+</template>
