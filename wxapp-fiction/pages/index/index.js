@@ -6,10 +6,6 @@ Page({
   data: {
     books: [{}],
   },
-  //事件处理函数
-  bindViewTap: function() {
-   
-  },
   onLoad: function () {
     wx.request({
       url: 'https://www.easy-mock.com/mock/5a236136e27b936ea88bda94/wxapp-fiction/bookshelf',
