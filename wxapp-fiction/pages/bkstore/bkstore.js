@@ -55,10 +55,11 @@ Page({
         var newArr = books.filter((item) => {
             return item.recommend_type == '本周强推'
           })
-        this.setRecommendTypes(books);
+        recommend_types = this.setRecommendTypes(books);
+        console.log(recommend_types);
         if(type==0){
           this.setData({
-            books: res.data.data.books
+            recommend_types: recommend_types
           })
         }
       }
