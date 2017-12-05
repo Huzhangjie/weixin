@@ -4,6 +4,7 @@ Page({
   data: {
     hdActiveIndex: 0,
     bdActiveIndex: 0,
+    allBooks: [],
     recommend_types :[{
       books: [],
       recommend: "",
@@ -52,35 +53,44 @@ Page({
       success: (res) => {
         // console.log(res.data.data.books);
         books = res.data.data.books;
-        var newArr = books.filter((item) => {
-            return item.recommend_type == '本周强推'
-          })
         recommend_types = this.setRecommendTypes(books);
+
         console.log(recommend_types);
         if(type==0){
           this.setData({
-            recommend_types: recommend_types
+            recommend_types: recommend_types,
+            allBooks: books
           })
         }
       }
     })
   },
 
+  // 获取数据后处理
   setRecommendTypes: function(books) {
     let recommend_types = [];
     let types = [];
+    // 将获得 的书籍的 "本周推荐  新书抢鲜放进types"
     for(let i=0, len=books.length; i<len; i++){
       types.push(books[i].recommend_type)
     }
+    // types 去重 
     types = [...new Set(types)];
+    // 循环types 将对应的books 放进对应的对方 最后push进 recommend_types
     for(let i=0, len=types.length; i<len; i++){
-      let newArr = books.filter(item => item.recommend_type == types[i]);
+      let newArr = books.filter(item => item.recommend_type == types[i]).slice(0,6);
       let obj = {books: newArr,recommen: types[i]}
-      // console.log(newArr);
       recommend_types.push(obj);
     }
-    console.log(recommend_types)
     return recommend_types;
+  },
+
+  // 
+  changeBooks: function(e) {
+    console.log(e);
+    const index = e.currentTarget.dataset.type;
+    const type = this.data.recommend_types[index].recommend;
+    console.log(type)
   },
 
   onLoad: function (options) {

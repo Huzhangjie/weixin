@@ -34,11 +34,11 @@
                                 <template is="recommend_hd" data="{{...item}}"></template>
                                 <view class="bd_row_books">
                                     <!-- 再在hd下面添加书籍显示 内部循环引进book 显示的模板 -->
-                                    <block wx:for="{{books}}" wx:key="index">
+                                    <block wx:for="{{recommend_types[index].books}}" wx:key="index">
                                         <template is="book_list" data="{{...item}}"></template>
                                     </block>
                                 </view>
-                                <view class="books_recommend_ft">
+                                <view class="books_recommend_ft" bindtap="changeBooks" data-type="{{index}}">
                                     <span>换一换</span>
                                     <image class="refresh" src="../../images/refresh.png" mode="aspectFit"></image>
                                 </view>
