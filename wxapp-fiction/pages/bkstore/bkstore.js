@@ -14,7 +14,7 @@ Page({
   // 头部导航的点击变化
   // type 为男生 女生 出版 这三种书籍的分类 对应下标
   hdchangeTab: function(e) {
-    var type = e.target.dataset.index;
+    let type = e.target.dataset.index;
     this.setData({
       hdActiveIndex: type,
     })
@@ -23,7 +23,7 @@ Page({
 
   // bd导航的点击变化
   bdchangeTab: function(e) {
-    var index = e.target.dataset.index;
+    let index = e.target.dataset.index;
     this.setData({
       bdActiveIndex: index,
     })
@@ -31,7 +31,7 @@ Page({
 
   // bd左右滑动对应Tab的改变
   bdSwiperTab: function(e) {
-    var index = e.detail.current;
+    let index = e.detail.current;
     this.setData({
       bdActiveIndex: index,
     })
@@ -54,8 +54,6 @@ Page({
         // console.log(res.data.data.books);
         books = res.data.data.books;
         recommend_types = this.setRecommendTypes(books);
-
-        console.log(recommend_types);
         if(type==0){
           this.setData({
             recommend_types: recommend_types,
@@ -79,7 +77,7 @@ Page({
     // 循环types 将对应的books 放进对应的对方 最后push进 recommend_types
     for(let i=0, len=types.length; i<len; i++){
       let newArr = books.filter(item => item.recommend_type == types[i]).slice(0,6);
-      let obj = {books: newArr,recommen: types[i]}
+      let obj = {books: newArr,recommend: types[i]}
       recommend_types.push(obj);
     }
     return recommend_types;
@@ -88,9 +86,15 @@ Page({
   // 
   changeBooks: function(e) {
     console.log(e);
-    const index = e.currentTarget.dataset.type;
-    const type = this.data.recommend_types[index].recommend;
-    console.log(type)
+    let index = e.currentTarget.dataset.type;
+    let title = this.data.recommend_types[index].books[5].title;
+    console.log(title)
+    let books = this.data.allBooks;
+    let indexInAll = this.data.allBooks.findIndex(function(value,books){
+      return value.title == title;
+    })
+    console.log(indexInAll)
+    
   },
 
   onLoad: function (options) {
