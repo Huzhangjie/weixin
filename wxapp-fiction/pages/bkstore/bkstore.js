@@ -85,14 +85,26 @@ Page({
 
   // 
   changeBooks: function(e) {
-    console.log(e);
-    let index = e.currentTarget.dataset.type;
-    let title = this.data.recommend_types[index].books[5].title;
-    console.log(title)
-    let books = this.data.allBooks;
-    let indexInAll = this.data.allBooks.findIndex(function(value,books){
-      return value.title == title;
+    //获取点击时对应的要改变书籍种类的下标
+    const index = e.currentTarget.dataset.index;
+    const type = this.data.recommend_types[index].recommend;
+    console.log(type)
+    const title = this.data.recommend_types[index].books[5].title;
+    let books = this.data.allBooks.filter(item => item.recommend_type == type);
+    console.log(books)
+    let indexInAll = books.findIndex(function(value,books){
+      return value.title === title;
     })
+    if(indexInAll < books.length - 6) {
+      books = books.slice(indexInAll + 1, indexInAll + 7)
+      this.setData({
+        [`recommend_types[${index}].books`]: books
+      })
+      console.log(books)
+    } else {
+      
+    }
+    
     console.log(indexInAll)
     
   },
