@@ -1,1 +1,36 @@
 /* pages/detail/detail.wxss */
+
+.page_bd {
+    width: 100%;
+    min-height: 100vh;
+}
+.page__ft {
+    height: 8vh;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.page__ft {
+    display: flex;
+}
+.page__ft_display{
+    flex: 1;
+    text-align: center;
+    color: #eb645e;
+    line-height: 8vh;
+    position: relative;
+}
+.page__ft .price:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid #8a8a8a;
+    transform: scaleY(.5)
+}
+.page__ft .read {
+    background-color: #eb645e;
+    color: white;
+}

@@ -1,2 +1,12 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+
+<view class="container">
+    <view class="page_bd">
+        
+    </view>
+    <view class="page__ft">
+        <view class="page__ft_display price">￥0.05/千字</view>
+        <view class="page__ft_display add">加入书架</view>
+        <view class="page__ft_display read">立即阅读</view>
+    </view>
+</view>
