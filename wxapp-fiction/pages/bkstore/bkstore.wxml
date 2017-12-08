@@ -1,12 +1,21 @@
 <import src="../template/template.wxml" />
 
 <view class="container">
+    <view class="page-mine">
+        
+    </view>
     <view class="page__hd">
         <view class="page__hd-fixed">
+            <view class="page__hd_mine">
+                <image src="../../images/headimg.png" mode="aspectFit"/>
+            </view>
             <view class="page__hd_tab hd_swiper-tab">
                 <view class="hd_swiper-tab-item {{hdActiveIndex==0?'active':''}}" bindtap="hdchangeTab" data-index='0'>男生</view>
                 <view class="hd_swiper-tab-item {{hdActiveIndex==1?'active':''}}" bindtap="hdchangeTab" data-index='1'>女生</view>
                 <view class="hd_swiper-tab-item {{hdActiveIndex==2?'active':''}}" bindtap="hdchangeTab" data-index='2'>出版</view>
+            </view>
+            <view class="page__hd_search">
+                <image src="../../images/search.png" mode="aspectFit"/>
             </view>
         </view>
     </view>
@@ -38,7 +47,7 @@
                                         <template is="book_list" data="{{...item}}"></template>
                                     </block>
                                 </view>
-                                <view class="books_recommend_ft" bindtap="changeBooks" data-type="{{index}}">
+                                <view class="books_recommend_ft" bindtap="changeBooks" data-index="{{index}}">
                                     <span>换一换</span>
                                     <image class="refresh" src="../../images/refresh.png" mode="aspectFit"></image>
                                 </view>
