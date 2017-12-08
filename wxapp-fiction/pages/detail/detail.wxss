@@ -1,9 +1,79 @@
 /* pages/detail/detail.wxss */
 
-.page_bd {
-    width: 100%;
-    min-height: 100vh;
+.page_hd {
+    margin: 0 30rpx;
 }
+.page__hd_bookInfo {
+    width: 100vw;
+    height: 25vh;
+}
+.bookCover {
+    width: 30vw;
+    height: 100%;
+    display: inline-block;
+}
+.bookCover image {
+    width: 19vh;
+    height: 100%;
+}
+.otherInfo {
+    margin-left: 30rpx;
+    position: absolute;
+    top: 0;
+    width: 60vw;
+    display: inline-block;
+}
+.bookTitle {
+    display: inline-block;
+}
+/* .tpAndAu {
+    margin-left: 30rpx;
+} */
+.otherInfo .type {
+    font-size: 12px;
+    display: inline-block;
+    padding-right: 10rpx;
+    color: #8a8a8a;
+    position: relative;
+}
+.otherInfo .type:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid #8a8a8a;
+    transform: scaleY(.5)
+}
+.otherInfo .author {
+    margin-left: 10rpx;
+    font-size: 12px;
+    display: inline-block;
+    color: #5e7de1;
+}
+.wAndct .words {
+    font-size: 13px;
+    color: #8a8a99;
+    padding-right: 10rpx;
+    display: inline-block;
+    position: relative;
+}
+.wAndct .words:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid #8a8a8a;
+    transform: scaleY(.5)
+}
+.wAndct .clicktimes {
+    font-size: 13px;
+    color: #8a8a99;
+    padding-left: 10rpx;
+    display: inline-block;
+}
+
 .page__ft {
     height: 8vh;
     position: fixed;

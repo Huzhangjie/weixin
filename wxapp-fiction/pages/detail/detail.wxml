@@ -1,8 +1,24 @@
 <!--pages/detail/detail.wxml-->
 
 <view class="container">
-    <view class="page_bd">
-        
+    <view class="page_hd">
+        <view class="page__hd_bookInfo">
+            <view class="bookCover">
+                <image src="../../images/dpcq.jpg" mode="aspectFit"/>
+            </view>
+            <view class="otherInfo">
+                <view class="bookTitle">斗破苍穹</view>
+                <view class="tpAndAu">
+                    <view class="type">玄幻修仙</view>
+                    <view class="author">天蚕土豆</view>
+                </view>
+                <view class="xingxing">✩✩✩✩✩</view>
+                <view class="wAndct">
+                    <view class="words">616.6万字</view>
+                    <view class="clicktimes">595.2万次点击</view>
+                </view>
+            </view>
+        </view>
     </view>
     <view class="page__ft">
         <view class="page__ft_display price">￥0.05/千字</view>
