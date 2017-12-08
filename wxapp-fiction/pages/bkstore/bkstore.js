@@ -87,6 +87,7 @@ Page({
   changeBooks: function(e) {
     //获取点击时对应的要改变书籍种类的下标
     const index = e.currentTarget.dataset.index;
+    console.log(index)
     const type = this.data.recommend_types[index].recommend;
     console.log(type)
     const title = this.data.recommend_types[index].books[5].title;
@@ -96,13 +97,33 @@ Page({
       return value.title === title;
     })
     if(indexInAll < books.length - 6) {
-      books = books.slice(indexInAll + 1, indexInAll + 7)
+      let newBooks = books.slice(indexInAll + 1, indexInAll + 7)
       this.setData({
-        [`recommend_types[${index}].books`]: books
+        [`recommend_types[${index}].books`]: newBooks
       })
-      console.log(books)
     } else {
-      
+      if(books[indexInAll+1]){
+        console.log(books[indexInAll+1])
+        //判断是否为最后一本书 是则从头赋值 newBooks
+        let newBooks = books.slice(indexInAll+1);
+        console.log(books.slice(0, 6 - newBooks.length));
+        newBooks.splice(newBooks.length,0,...books.slice(0, 6 - newBooks.length));
+        console.log(newBooks)
+        this.setData({
+          [`recommend_types[${index}].books`]: newBooks
+        })
+
+      }else {
+        let newBooks = books.slice(indexInAll+1, books.length);
+        newBooks = books.slice(0, indexInAll + 7 - books.length);
+        this.setData({
+          [`recommend_types[${index}].books`]: newBooks
+        })
+      }
+      // if(books[indexInAll+1]){//判断是否为最后一本书 是则从头赋值 newBooks
+
+      // }
+      // let newBooks = books.slice(indexInAll + 1, indexInAll + 7)
     }
     
     console.log(indexInAll)
