@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
 
 <view class="container">
-    <view class="page_hd">
+    <view class="page__hd">
         <view class="page__hd_bookInfo">
             <view class="bookCover">
                 <image src="../../images/dpcq.jpg" mode="aspectFit"/>
@@ -18,7 +18,26 @@
                     <view class="clicktimes">595.2万次点击</view>
                 </view>
             </view>
+            <view class="synopsis">
+                <text>这里是属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！等级制度：斗者，斗师，大斗师，斗灵，斗王，斗皇，斗宗，斗尊，斗圣，斗帝。三十年河东，三十年河西，莫欺少年穷！ 年仅15岁的萧家废物，于此地，立下了誓言，从今以后便一步步走向斗气大陆巅峰！
+                </text>
+            </view>
+            <view class="catalog">
+                <view class="catalog_left">
+                    <image src="../../images/catalog.png" mode="aspectFit"/>
+                </view>
+                <view class="catalog_center">
+                    <text>12月09号 更至：第一千五百章 斗帝之战11111</text>
+                </view>
+                <view class="catalog_right">
+                    <text>连载中</text>
+                </view>
+            </view>
         </view>
+    </view>
+    <view class="page__bd">
+        <view class="wirte"></view>
+
     </view>
     <view class="page__ft">
         <view class="page__ft_display price">￥0.05/千字</view>

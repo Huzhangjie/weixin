@@ -1,15 +1,15 @@
 /* pages/detail/detail.wxss */
 
-.page_hd {
-    margin: 0 30rpx;
+.page__hd {
+    padding: 0 30rpx;
+    border-bottom: 8px solid #f5f5f5;
 }
-.page__hd_bookInfo {
-    width: 100vw;
+/* .page__hd_bookInfo {
     height: 25vh;
-}
+} */
 .bookCover {
-    width: 30vw;
-    height: 100%;
+    width: 19vh;
+    height: 25vh;
     display: inline-block;
 }
 .bookCover image {
@@ -52,7 +52,7 @@
     color: #5e7de1;
 }
 .wAndct .words {
-    font-size: 13px;
+    font-size: 12px;
     color: #8a8a99;
     padding-right: 10rpx;
     display: inline-block;
@@ -73,7 +73,59 @@
     padding-left: 10rpx;
     display: inline-block;
 }
+.synopsis {
+    line-height: 20px;
+    font-size: 14px;
+    height: 60px;
+    overflow: hidden;
+}
 
+.catalog {
+    margin-top: 5px;
+    width: 100%;
+    height: 6vh;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+}
+.catalog:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #8a8a8a;
+    transform: scaleY(.2);
+}
+.catalog .catalog_left {
+    padding: 1vh;
+    padding-left: 0;
+}
+.catalog .catalog_left image{
+    height: 4vh;
+    width: 4vh;
+}
+.catalog .catalog_center {
+    line-height: 6vh;
+    overflow: hidden;
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.catalog .catalog_right {
+    line-height: 6vh;
+    color: green;
+}
+.catalog .catalog_right:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-top: 1px solid #8a8a8a;
+    border-right: 1px solid #8a8a8a;
+    transform: rotate(45deg);
+}
 .page__ft {
     height: 8vh;
     position: fixed;
