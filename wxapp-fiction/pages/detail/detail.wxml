@@ -36,8 +36,33 @@
         </view>
     </view>
     <view class="page__bd">
-        <view class="wirte"></view>
-
+        <view class="write">写评论</view>
+        <view class="comment_type">
+            <text>最新评论</text>
+        </view>
+        <block wx:for="123456">
+            <view class="comment">
+                <view class="comment_left">
+                    <image src="../../images/headimg.png" mode="aspectFit"/>
+                </view>
+                <view class="comment_right">
+                    <view class="comment_hd">
+                        <view class="nameAndtime">
+                            <view class="name">Huzj</view>
+                            <view class="time">11月09日 00:00</view>
+                        </view>
+                        <view class="dianzan">
+                            <view class="num">65</view>
+                            <image src="../../images/dianzan.png" mode="aspectFit"/>
+                        </view>
+                    </view>
+                    <view class="comment_bd">
+                        <text>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+        
     </view>
     <view class="page__ft">
         <view class="page__ft_display price">￥0.05/千字</view>
